@@ -58,4 +58,8 @@ app.use("/api/users", userRoutes);
 // app.use("/api/version", versionRoutes);
 // app.use("/api/home-notification", homeNotificationRoutes);
 
+app.get("/", async (req, res) => {
+    res.send("App is Running");
+});
+
 module.exports = app;
