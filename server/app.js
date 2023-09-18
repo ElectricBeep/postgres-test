@@ -5,6 +5,8 @@ var cors = require("cors");
 
 const db = require("./database/models/index.js");
 
+console.log("GOTHERE1")
+
 db.sequelize.sync().then(async n => {
     await db.user.findOrCreate({
         where: {
@@ -22,6 +24,8 @@ db.sequelize.sync().then(async n => {
         console.log(err);
     }
 );
+
+console.log("GOTHERE2")
 
 const app = express();
 app.use(helmet());
