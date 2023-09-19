@@ -17,7 +17,7 @@ const UsersList: FC<UsersListProps> = ({ users }) => {
     <>
       <div>
         {users?.map((user) => (
-          <div className="mx-auto w-fit mt-4">
+          <div key={user.id} className="mx-auto w-fit mt-4">
             <div> ID: {user.id}</div>
             <div>NAME: {user.name}</div>
             <div>EMAIL: {user.email}</div>
