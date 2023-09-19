@@ -5,7 +5,7 @@ import { User } from "@/types";
 export default async function Home() {
   const getUsers = async (): Promise<User[]> => {
     try {
-      const res = await axios.get("http://localhost:3000/api/users");
+      const res = await axios.get(`${process.env.BASE_URL}/api/users`);
       return (res.data as any) || [];
 
     } catch (error) {
@@ -17,8 +17,8 @@ export default async function Home() {
   const users = await getUsers();
 
   return (
-    <>
+    <div className="w-[1440px] mx-auto py-10">
       <UsersList users={users} />
-    </>
+    </div>
   )
 }
