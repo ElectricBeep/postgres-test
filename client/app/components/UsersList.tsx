@@ -11,7 +11,7 @@ const UsersList = () => {
   const getUsers = async () => {
     setIsLoading(true);
     try {
-      const res = await axios.get(`${process.env.BASE_URL}/api/users`);
+      const res = await axios.get("https://test-6rtf.onrender.com/api/users");
       setUsers(res.data);
 
     } catch (error) {
