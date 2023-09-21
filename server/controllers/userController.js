@@ -4,7 +4,6 @@ var uuid = require("uuid");
 const db = require("../database/models/index.js");
 
 exports.getAllUsers = async (req, res) => {
-  console.log("HOT HERE");
   try {
     const users = await db.user.findAll();
 
